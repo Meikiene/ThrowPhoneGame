@@ -7,6 +7,7 @@
     <script>
       var ax;
       var axHigh = 0;
+      var rx;
       function setup(){
         createCanvas(window.innerWidth,window.innerHeight);
       }
@@ -17,6 +18,8 @@
         axHigh = ax;
         document.getElementById('ax').innerHTML = "A Accel = " + ax;
         }
+        rx = rotationX;
+        document.getElementById('rx').innerHTML = "X rotation = " + rx; 
       }
       
     </script>
