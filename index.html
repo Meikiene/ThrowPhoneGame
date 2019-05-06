@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
   <head>
     <script src="p5/p5.min.js"></script>
     <script src="p5/p5.geolocation.js"></script>
@@ -7,13 +7,17 @@
     <h1 id="ax"></h1>
     <script>
       var ax;
+      var axHigh = 0;
       function setup(){
         createCanvas(window.innerWidth,window.innerHeight);
       }
       
       function draw(){
         ax = accelerationX;
+        if (ax < axHigh) {
+        axHigh = ax;
         document.getElementById('ax').innerHTML = "A Accel = " + ax;
+        }
       }
       
     </script>
